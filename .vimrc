@@ -1,6 +1,6 @@
 "Configs
 syntax on
-set number
+set relativenumber
 set list listchars=tab:»·,trail:·
 
 set nocompatible              " be iMproved, required
@@ -25,12 +25,21 @@ Plugin 'cakebaker/scss-syntax.vim'
 " NERDTree
 Bundle 'scrooloose/nerdtree'
 
-" Emmet
-Plugin 'mattn/emmet-vim'
-imap <expr> <tab> emmet#expandAbbrIntelligent("\<tab>")
+" Solarized Theme
+Plugin 'altercation/vim-colors-solarized'
 
-" Color theme
-colorscheme Tomorrow-Night
+" colors preview
+Plugin 'ap/vim-css-color'
+
+" Aitline
+Plugin 'bling/vim-airline'
+
+" Ctrlp
+Plugin 'kien/ctrlp.vim'
+let g:ctrlp_map = '<c-p>'
+
+" JS syntax
+Plugin 'isRuslan/vim-es6'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -46,3 +55,6 @@ filetype plugin indent on    " required
 "
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
+
+set background=dark
+colorscheme solarized
