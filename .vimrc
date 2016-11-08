@@ -3,6 +3,29 @@ syntax on
 set relativenumber
 set list listchars=tab:»·,trail:·
 
+" Use spaces instead of tabs
+set expandtab
+
+" Be smart when using tabs ;)
+set smarttab
+
+" 1 tab == 2 spaces
+set shiftwidth=2
+set tabstop=2
+
+" Linebreak on 120 characters
+set lbr
+set tw=120
+set wm=0
+set fo=cqt
+
+set ai "Auto indent
+set si "Smart indent
+set wrap "Wrap lines
+
+" Git Commit ON 72 chars
+autocmd Filetype gitcommit setlocal spell textwidth=72
+
 set nocompatible              " be iMproved, required
 filetype off                  " required
 " set the runtime path to include Vundle and initialize
@@ -21,6 +44,9 @@ autocmd BufReadPost * :DetectIndent
 " scss and css syntax
 Plugin 'JulesWang/css.vim'
 Plugin 'cakebaker/scss-syntax.vim'
+
+" Vim Stylus CSS
+Plug 'wavded/vim-stylus'
 
 " NERDTree
 Bundle 'scrooloose/nerdtree'
