@@ -46,7 +46,7 @@ Plugin 'JulesWang/css.vim'
 Plugin 'cakebaker/scss-syntax.vim'
 
 " Vim Stylus CSS
-Plug 'wavded/vim-stylus'
+Plugin 'wavded/vim-stylus'
 
 " NERDTree
 Bundle 'scrooloose/nerdtree'
