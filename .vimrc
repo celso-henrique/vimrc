@@ -37,6 +37,9 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
 
+" ejs
+Bundle 'nikvdp/ejs-syntax'
+
 " detect indentation of documents
 Plugin 'ciaranm/detectindent'
 autocmd BufReadPost * :DetectIndent
@@ -66,6 +69,24 @@ let g:ctrlp_map = '<c-p>'
 
 " JS syntax
 Plugin 'isRuslan/vim-es6'
+
+"editor config
+Plugin 'editorconfig/editorconfig-vim'
+
+" Syntastic
+Bundle 'scrooloose/syntastic'
+Plugin 'mtscout6/syntastic-local-eslint.vim'
+
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+let g:syntastic_html_tidy_exec = 'tidy'
+let g:syntastic_html_tidy_blocklevel_tags = ['update-title', 'update-meta']
+let g:syntastic_javascript_checkers = ['eslint', 'jshint']
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
