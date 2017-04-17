@@ -77,6 +77,12 @@ Plugin 'editorconfig/editorconfig-vim'
 Bundle 'scrooloose/syntastic'
 Plugin 'mtscout6/syntastic-local-eslint.vim'
 
+" Prettier
+Plugin 'sbdchd/neoformat'
+autocmd FileType javascript set formatprg=prettier-standard\ --stdin\ --parser\ flow\ --single-quote
+let g:neoformat_try_formatprg = 1
+autocmd BufWritePre *.js Neoformat
+
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
